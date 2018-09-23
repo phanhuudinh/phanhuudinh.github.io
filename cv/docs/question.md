@@ -2,19 +2,21 @@ The content is the mix of questions and exams (via http://codeshare.io/) that yo
 
 # C# .NET OOP:
 ## 1. In OOP (and C#), what is the difference between `Abstract class` and `Interface`?
-Abstract class often used to define the core function of an class, some method can be implemented, interface is a blueprint contract, it just declare functions which derived class must implement.
+Abstract class often used to declare the core function of an class, some method can be implemented, interface is a blueprint contract, it just declare functions which derived class must implement.
 
 One class can extend just only one abstrac class but can implement many interface
 
 Abstrac class can have fields, interface can not
 
 ## 2. What is the `Abstract method, Virtual Method`?
-Abstract method is the method just be declared without implementation, the derived class have to implement this abstract method.
+Abstract method is the method `just be declared` without implementation, the derived class have to implement this abstract method.
 
-Vitual method is the method with full implementation, but can be overrided by derived class by override keyword
+Vitual method is the method with `implementation`, but `can be overrided` by derived class by override keyword
 
 ## 3. What is `“protected internal”` access modifiers?
-protected member can be accessed by the code in same class or the class that derived directly  from it.
+`protected internal` The type or member can be accessed by any code in the assembly in which it is declared, or from within a derived class in another assembly.
+
+`private protected` The type or member can be accessed only within its declaring assembly, by code in the same class or in a type that is derived from that class.
 
 internal by all the code in the same assembly with it.
 
@@ -60,6 +62,18 @@ var copiedObject = jQuery.extend(true, {}, originalObject)
 Asynchronous programming is a means of parallel programming in which a unit of work runs separately from the main application thread and notifies the calling thread of its completion, failure or progress.
 
 Parallel is many task working on the same time by defferent thread, asynchronous use just one thread with non blocking mechanism
+
+It has this about asynchronous programming:
+
+`Asynchronous` calls are used to prevent “blocking” within an application. [Such a] call will spin-off in an already existing thread (such as an I/O thread) and do its task when it can.
+
+this about parallel programming:
+
+In `parallel` programming you still break up work or tasks, but the key differences is that you spin up new threads for each chunk of work
+
+and this in summary:
+
+`asynchronous calls will use threads already` in use by the system and parallel programming requires the developer to break the work up, spinup, and teardown threads needed.
 ## 5. Is JavaScript on browser single thread or multithread?
 js in browser is single thread
 ## 6. If JavaScript is a single thread, how asynchronous working?
@@ -97,3 +111,9 @@ export default class {}
 ```
 
 ## 9  What is Prototype in js
+
+Prototypes. When a function is created in JavaScript, JavaScript engine adds a prototype property to the function. This prototype property is an object (called as prototype object) has a constructor property by default. constructor property points back to the function on which prototype object is a property
+
+## 10 what is promise
+
+A promise represents the eventual `result of an asynchronous operation`. It is a placeholder into which the `successful result value or reason for failure` will materialize.
